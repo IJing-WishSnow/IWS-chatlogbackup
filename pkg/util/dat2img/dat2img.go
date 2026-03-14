@@ -35,7 +35,8 @@ var (
 	Formats = []Format{JPG, PNG, GIF, TIFF, BMP, WXGF}
 
 	V4Format1 = Format{Header: []byte{0x07, 0x08, 0x56, 0x31}, AesKey: []byte("cfcd208495d565ef")}
-	V4Format2 = Format{Header: []byte{0x07, 0x08, 0x56, 0x32}, AesKey: []byte("0000000000000000")} // FIXME
+	V4Format2 = Format{Header: []byte{0x07, 0x08, 0x56, 0x32}, AesKey: []byte{0x8c, 0xab, 0x37, 0x4c, 0x7b, 0x87, 0xd9, 0xf0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00}}
+	// V4Format2 = Format{Header: []byte{0x07, 0x08, 0x56, 0x32}, AesKey: []byte("0000000000000000")} // FIXME
 	V4Formats = []*Format{&V4Format1, &V4Format2}
 
 	// WeChat v4 related constants
@@ -197,6 +198,12 @@ func SetAesKey(key string) {
 	if err != nil {
 		log.Error().Err(err).Msg("invalid aes key")
 		return
+	}
+	// 补齐到16字节
+	if len(decoded) < 16 {
+		padded := make([]byte, 16)
+		copy(padded, decoded)
+		decoded = padded
 	}
 	V4Format2.AesKey = decoded
 }
