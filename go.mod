@@ -1,4 +1,4 @@
-module github.com/sjzar/chatlog
+module github.com/IJing-WishSnow/IWS-chatlogbackup
 
 go 1.24.0
 
