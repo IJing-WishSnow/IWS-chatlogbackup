@@ -5,7 +5,7 @@ package windows
 import (
 	"context"
 
-	"github.com/sjzar/chatlog/internal/wechat/model"
+	"github.com/IJing-WishSnow/IWS-chatlogbackup/internal/wechat/model"
 )
 
 func (e *V4Extractor) Extract(ctx context.Context, proc *model.Process) (string, string, error) {

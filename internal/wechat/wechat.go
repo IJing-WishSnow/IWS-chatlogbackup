@@ -4,10 +4,10 @@ import (
 	"context"
 	"os"
 
-	"github.com/sjzar/chatlog/internal/errors"
-	"github.com/sjzar/chatlog/internal/wechat/decrypt"
-	"github.com/sjzar/chatlog/internal/wechat/key"
-	"github.com/sjzar/chatlog/internal/wechat/model"
+	"github.com/IJing-WishSnow/IWS-chatlogbackup/internal/errors"
+	"github.com/IJing-WishSnow/IWS-chatlogbackup/internal/wechat/decrypt"
+	"github.com/IJing-WishSnow/IWS-chatlogbackup/internal/wechat/key"
+	"github.com/IJing-WishSnow/IWS-chatlogbackup/internal/wechat/model"
 )
 
 // Account 表示一个微信账号

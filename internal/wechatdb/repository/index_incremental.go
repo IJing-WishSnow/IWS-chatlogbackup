@@ -7,8 +7,8 @@ import (
 
 	"github.com/rs/zerolog/log"
 
-	"github.com/sjzar/chatlog/internal/model"
-	"github.com/sjzar/chatlog/internal/wechatdb/msgstore"
+	"github.com/IJing-WishSnow/IWS-chatlogbackup/internal/model"
+	"github.com/IJing-WishSnow/IWS-chatlogbackup/internal/wechatdb/msgstore"
 )
 
 // IndexMessages incrementally indexes the provided messages into the FTS cache.

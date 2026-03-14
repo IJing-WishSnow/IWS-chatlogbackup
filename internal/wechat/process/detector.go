@@ -1,9 +1,9 @@
 package process
 
 import (
-	"github.com/sjzar/chatlog/internal/wechat/model"
-	"github.com/sjzar/chatlog/internal/wechat/process/darwin"
-	"github.com/sjzar/chatlog/internal/wechat/process/windows"
+	"github.com/IJing-WishSnow/IWS-chatlogbackup/internal/wechat/model"
+	"github.com/IJing-WishSnow/IWS-chatlogbackup/internal/wechat/process/darwin"
+	"github.com/IJing-WishSnow/IWS-chatlogbackup/internal/wechat/process/windows"
 )
 
 type Detector interface {

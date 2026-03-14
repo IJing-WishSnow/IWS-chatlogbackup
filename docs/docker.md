@@ -1,6 +1,7 @@
 # Docker 部署指南
 
 ## 目录
+
 - [Docker 部署指南](#docker-部署指南)
   - [目录](#目录)
   - [部署准备](#部署准备)
@@ -15,8 +16,8 @@
     - [微信数据目录](#微信数据目录)
     - [工作目录](#工作目录)
   - [远程同步部署](#远程同步部署)
-      - [配置指南](#配置指南)
-      - [部署注意事项](#部署注意事项)
+    - [配置指南](#配置指南)
+    - [部署注意事项](#部署注意事项)
   - [部署验证](#部署验证)
   - [常见问题](#常见问题)
     - [1. 容器启动失败](#1-容器启动失败)
@@ -43,7 +44,8 @@ Data Key: [c0163e***ac3dc6]
 Image Key: [38636***653361]
 ```
 
-> 💡 **提示**: 
+> 💡 **提示**:
+>
 > - macOS 用户需要临时关闭 SIP 才能获取密钥，详见 [macOS 版本说明](../README.md#macos-版本说明)
 
 ### 定位微信数据目录
@@ -51,6 +53,7 @@ Image Key: [38636***653361]
 根据不同操作系统，微信数据目录位置如下：
 
 **Windows 系统**:
+
 ```
 # 微信 3.x 版本
 C:\Users\{用户名}\Documents\WeChat Files\{微信ID}
@@ -60,6 +63,7 @@ C:\Users\{用户名}\Documents\xwechat_files\{微信ID}
 ```
 
 **macOS 系统**:
+
 ```
 # 微信 3.x 版本
 /Users/{用户名}/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/{版本号}/{微信ID}
@@ -73,24 +77,28 @@ C:\Users\{用户名}\Documents\xwechat_files\{微信ID}
 chatlog 提供了两个镜像源：
 
 **Docker Hub**:
+
 ```shell
 docker pull sjzar/chatlog:latest
 ```
 
 **GitHub Container Registry (ghcr)**:
+
 ```shell
 docker pull ghcr.io/sjzar/chatlog:latest
 ```
 
-> 💡 **镜像地址**: 
-> - Docker Hub: https://hub.docker.com/r/sjzar/chatlog
-> - GitHub Container Registry: https://ghcr.io/sjzar/chatlog
+> 💡 **镜像地址**:
+>
+> - Docker Hub: <https://hub.docker.com/r/sjzar/chatlog>
+> - GitHub Container Registry: <https://ghcr.io/sjzar/chatlog>
 
 ## 部署方式
 
 ### Docker Run 方式
 
 **基础部署**:
+
 ```shell
 docker run -d \
   --name chatlog \
@@ -102,6 +110,7 @@ docker run -d \
 > 这种部署方式依赖于数据目录下的 chatlog.json 文件作为配置，通过 chatlog 获取密钥时将自动更新 chatlog.json 文件
 
 **完整配置示例**:
+
 ```shell
 docker run -d \
   --name chatlog \
@@ -202,6 +211,7 @@ docker-compose down
 ### 微信数据目录
 
 **Windows 示例**:
+
 ```shell
 # 微信 4.x 版本
 -v "/c/Users/username/Documents/xwechat_files/wxid_xxx:/app/data"
@@ -211,6 +221,7 @@ docker-compose down
 ```
 
 **macOS 示例**:
+
 ```shell
 # 微信 4.x 版本
 -v "/Users/username/Library/Containers/com.tencent.xinWeChat/Data/Documents/xwechat_files/wxid_xxx:/app/data"
@@ -224,15 +235,16 @@ docker-compose down
 工作目录用于存放解密后的数据库文件，可以使用以下两种方式：
 
 **本地路径方式**:
+
 ```shell
 -v "/path/to/local/work:/app/work"
 ```
 
 **命名卷方式**:
+
 ```shell
 -v "chatlog-work:/app/work"
 ```
-
 
 ## 远程同步部署
 
@@ -263,16 +275,19 @@ docker-compose down
 部署完成后，通过以下方式验证服务是否正常运行：
 
 **1. 检查容器状态**
+
 ```shell
 docker ps | grep chatlog
 ```
 
 **2. 查看服务日志**
+
 ```shell
 docker logs chatlog
 ```
 
 **3. 访问 HTTP API**
+
 ```shell
 # 检查服务健康状态
 curl http://localhost:5030/api/v1/session
@@ -282,13 +297,14 @@ curl http://localhost:5030/api/v1/contact
 ```
 
 **4. 访问 MCP 服务**
+
 ```shell
 http://localhost:5030/mcp
 ```
 
 **5. 访问 Web 界面**
 
-在浏览器中打开：http://localhost:5030
+在浏览器中打开：<http://localhost:5030>
 
 ## 常见问题
 
@@ -297,15 +313,17 @@ http://localhost:5030/mcp
 **问题**: 容器启动后立即退出
 
 **解决方案**:
+
 - 检查密钥是否正确：`docker logs chatlog`
 - 确认数据目录挂载路径是否正确
 - 检查环境变量配置是否完整
 
 ### 2. 无法访问 HTTP 服务
 
-**问题**: 浏览器无法访问 http://localhost:5030
+**问题**: 浏览器无法访问 <http://localhost:5030>
 
 **解决方案**:
+
 - 检查端口映射是否正确：`docker port chatlog`
 - 确认防火墙是否允许 5030 端口访问
 - 检查容器内服务是否正常启动
@@ -315,6 +333,7 @@ http://localhost:5030/mcp
 **问题**: 日志显示权限不足或文件无法访问
 
 **解决方案**:
+
 ```shell
 # Linux/macOS 系统
 chmod -R 755 /path/to/your/wechat/data
@@ -328,6 +347,7 @@ docker run --user $(id -u):$(id -g) ...
 **问题**: 显示密钥格式不正确
 
 **解决方案**:
+
 - 确保密钥为十六进制格式，不包含方括号
 - 正确格式：`CHATLOG_DATA_KEY=c0163eac3dc6`
 - 错误格式：`CHATLOG_DATA_KEY=[c0163e***ac3dc6]`
@@ -337,6 +357,7 @@ docker run --user $(id -u):$(id -g) ...
 **问题**: 无法自动检测微信版本
 
 **解决方案**:
+
 - 手动设置微信平台：`CHATLOG_PLATFORM=darwin` 或 `CHATLOG_PLATFORM=windows`
 - 手动设置微信版本：`CHATLOG_VERSION=4` 或 `CHATLOG_VERSION=3`
 
@@ -345,6 +366,7 @@ docker run --user $(id -u):$(id -g) ...
 **问题**: 5030 端口已被占用
 
 **解决方案**:
+
 ```shell
 # 使用其他端口，如 8080
 docker run -p 8080:5030 ...
@@ -354,4 +376,4 @@ ports:
   - "8080:5030"
 ```
 
-> 💡 **获取更多帮助**: 如遇到其他问题，请查看项目的 [Issues](https://github.com/sjzar/chatlog/issues) 页面或提交新的问题反馈。
+> 💡 **获取更多帮助**: 如遇到其他问题，请查看项目的 [Issues](https://github.com/IJing-WishSnow/IWS-chatlogbackup/issues) 页面或提交新的问题反馈。

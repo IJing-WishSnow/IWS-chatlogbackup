@@ -16,8 +16,8 @@ import (
 
 	_ "github.com/mattn/go-sqlite3"
 
-	"github.com/sjzar/chatlog/internal/model"
-	"github.com/sjzar/chatlog/internal/wechatdb/msgstore"
+	"github.com/IJing-WishSnow/IWS-chatlogbackup/internal/model"
+	"github.com/IJing-WishSnow/IWS-chatlogbackup/internal/wechatdb/msgstore"
 )
 
 const (

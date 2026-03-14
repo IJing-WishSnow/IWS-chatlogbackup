@@ -12,7 +12,7 @@ import (
 	whis "github.com/ggerganov/whisper.cpp/bindings/go/pkg/whisper"
 	"github.com/rs/zerolog/log"
 
-	"github.com/sjzar/chatlog/pkg/util/silk"
+	"github.com/IJing-WishSnow/IWS-chatlogbackup/pkg/util/silk"
 )
 
 // WhisperCPPConfig controls the on-device whisper.cpp backend.

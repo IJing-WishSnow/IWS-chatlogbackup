@@ -6,24 +6,24 @@ _聊天记录工具，帮助大家轻松使用自己的聊天数据_
 
 [![ImgMCP](https://cdn.imgmcp.com/imgmcp-logo-small.png)](https://imgmcp.com)
 
-[![Go Report Card](https://goreportcard.com/badge/github.com/sjzar/chatlog)](https://goreportcard.com/report/github.com/sjzar/chatlog)
-[![GoDoc](https://godoc.org/github.com/sjzar/chatlog?status.svg)](https://godoc.org/github.com/sjzar/chatlog)
-[![GitHub release](https://img.shields.io/github/release/sjzar/chatlog.svg)](https://github.com/sjzar/chatlog/releases)
-[![GitHub license](https://img.shields.io/github/license/sjzar/chatlog.svg)](https://github.com/sjzar/chatlog/blob/main/LICENSE)
+[![Go Report Card](https://goreportcard.com/badge/github.com/IJing-WishSnow/IWS-chatlogbackup)](https://goreportcard.com/report/github.com/IJing-WishSnow/IWS-chatlogbackup)
+[![GoDoc](https://godoc.org/github.com/IJing-WishSnow/IWS-chatlogbackup?status.svg)](https://godoc.org/github.com/IJing-WishSnow/IWS-chatlogbackup)
+[![GitHub release](https://img.shields.io/github/release/sjzar/chatlog.svg)](https://github.com/IJing-WishSnow/IWS-chatlogbackup/releases)
+[![GitHub license](https://img.shields.io/github/license/sjzar/chatlog.svg)](https://github.com/IJing-WishSnow/IWS-chatlogbackup/blob/main/LICENSE)
 
 </div>
 
 ## Feature
 
--   从本地数据库文件中获取聊天数据
--   支持 Windows / macOS 系统，兼容微信 3.x / 4.x 版本
--   支持获取数据与图片密钥 (Windows < 4.0.3.36 / macOS < 4.0.3.80)
--   支持图片、语音等多媒体数据解密，支持 wxgf 格式解析
--   支持自动解密数据库，并提供新消息 Webhook 回调
--   提供 Terminal UI 界面，同时支持命令行工具和 Docker 镜像部署
--   提供 HTTP API 服务，可轻松查询聊天记录、联系人、群聊、最近会话等信息
--   支持 MCP Streamable HTTP 协议，可与 AI 助手无缝集成
--   支持多账号管理，可在不同账号间切换
+- 从本地数据库文件中获取聊天数据
+- 支持 Windows / macOS 系统，兼容微信 3.x / 4.x 版本
+- 支持获取数据与图片密钥 (Windows < 4.0.3.36 / macOS < 4.0.3.80)
+- 支持图片、语音等多媒体数据解密，支持 wxgf 格式解析
+- 支持自动解密数据库，并提供新消息 Webhook 回调
+- 提供 Terminal UI 界面，同时支持命令行工具和 Docker 镜像部署
+- 提供 HTTP API 服务，可轻松查询聊天记录、联系人、群聊、最近会话等信息
+- 支持 MCP Streamable HTTP 协议，可与 AI 助手无缝集成
+- 支持多账号管理，可在不同账号间切换
 
 ## Quick Start
 
@@ -39,24 +39,24 @@ _聊天记录工具，帮助大家轻松使用自己的聊天数据_
 
 ### 常见问题快速解决
 
--   **macOS 用户**：获取密钥前需[临时关闭 SIP](#macos-版本说明)
--   **Windows 用户**：遇到界面显示问题请[使用 Windows Terminal](#windows-版本说明)
--   **集成 AI 助手**：查看 [MCP 集成指南](#mcp-集成)
--   **无法获取密钥**：查看 [FAQ](https://github.com/sjzar/chatlog/issues/197)
+- **macOS 用户**：获取密钥前需[临时关闭 SIP](#macos-版本说明)
+- **Windows 用户**：遇到界面显示问题请[使用 Windows Terminal](#windows-版本说明)
+- **集成 AI 助手**：查看 [MCP 集成指南](#mcp-集成)
+- **无法获取密钥**：查看 [FAQ](https://github.com/IJing-WishSnow/IWS-chatlogbackup/issues/197)
 
 ## 安装指南
 
 ### 从源码安装
 
 ```bash
-go install github.com/sjzar/chatlog@latest
+go install github.com/IJing-WishSnow/IWS-chatlogbackup@latest
 ```
 
 > 💡 **提示**: 部分功能有 cgo 依赖，编译前需确认本地有 C 编译环境。
 
 ### 下载预编译版本
 
-访问 [Releases](https://github.com/sjzar/chatlog/releases) 页面下载适合您系统的预编译版本。
+访问 [Releases](https://github.com/IJing-WishSnow/IWS-chatlogbackup/releases) 页面下载适合您系统的预编译版本。
 
 ## 使用指南
 
@@ -77,10 +77,10 @@ chatlog --console // 打开控制台前端模式
 
 操作方法：
 
--   使用 `↑` `↓` 键选择菜单项
--   按 `Enter` 确认选择
--   按 `Esc` 返回上级菜单
--   按 `Ctrl+C` 退出程序
+- 使用 `↑` `↓` 键选择菜单项
+- 按 `Enter` 确认选择
+- 按 `Esc` 返回上级菜单
+- 按 `Ctrl+C` 退出程序
 
 ### 命令行模式
 
@@ -130,8 +130,8 @@ docker pull ghcr.io/sjzar/chatlog:latest
 
 > 💡 **镜像地址**:
 >
-> -   Docker Hub: https://hub.docker.com/r/sjzar/chatlog
-> -   GitHub Container Registry: https://ghcr.io/sjzar/chatlog
+> - Docker Hub: <https://hub.docker.com/r/sjzar/chatlog>
+> - GitHub Container Registry: <https://ghcr.io/sjzar/chatlog>
 
 **2. 运行容器**
 
@@ -199,31 +199,31 @@ GET /api/v1/chatlog?time=2023-01-01&talker=wxid_xxx
 
 参数说明：
 
--   `time`: 时间范围，格式为 `YYYY-MM-DD` 或 `YYYY-MM-DD~YYYY-MM-DD`
--   `talker`: 聊天对象标识（支持 wxid、群聊 ID、备注名、昵称等）
--   `limit`: 返回记录数量
--   `offset`: 分页偏移量
--   `format`: 输出格式，支持 `json`、`csv` 或纯文本
+- `time`: 时间范围，格式为 `YYYY-MM-DD` 或 `YYYY-MM-DD~YYYY-MM-DD`
+- `talker`: 聊天对象标识（支持 wxid、群聊 ID、备注名、昵称等）
+- `limit`: 返回记录数量
+- `offset`: 分页偏移量
+- `format`: 输出格式，支持 `json`、`csv` 或纯文本
 
 ### 其他 API 接口
 
--   **联系人列表**：`GET /api/v1/contact`
--   **群聊列表**：`GET /api/v1/chatroom`
--   **最近会话**：`GET /api/v1/session`
--   **日记功能**：`GET /api/v1/diary`
--   **搜索功能**：`GET /api/v1/search`
--   **总结功能**：`GET /api/v1/dashboard`
+- **联系人列表**：`GET /api/v1/contact`
+- **群聊列表**：`GET /api/v1/chatroom`
+- **最近会话**：`GET /api/v1/session`
+- **日记功能**：`GET /api/v1/diary`
+- **搜索功能**：`GET /api/v1/search`
+- **总结功能**：`GET /api/v1/dashboard`
 
 ### 多媒体内容
 
 聊天记录中的多媒体内容会通过 HTTP 服务进行提供，可通过以下路径访问：
 
--   **图片内容**：`GET /image/<id>`
--   **头像获取**：`GET /avatar/<wxid>`
--   **视频内容**：`GET /video/<id>`
--   **文件内容**：`GET /file/<id>`
--   **语音内容**：`GET /voice/<id>`
--   **多媒体内容**：`GET /data/<data dir relative path>`
+- **图片内容**：`GET /image/<id>`
+- **头像获取**：`GET /avatar/<wxid>`
+- **视频内容**：`GET /video/<id>`
+- **文件内容**：`GET /file/<id>`
+- **语音内容**：`GET /voice/<id>`
+- **多媒体内容**：`GET /data/<data dir relative path>`
 
 当请求图片、视频、文件内容时，将返回 302 跳转到多媒体内容 URL。
 当请求语音内容时，将直接返回语音内容，并对原始 SILK 语音做了实时转码 MP3 处理。添加参数后缀`/?transcribe=1`可以将语音转为文字。
@@ -322,13 +322,13 @@ GET /mcp
 
 Chatlog 可以与多种支持 MCP 的 AI 助手集成，包括：
 
--   **ChatWise**: 直接支持 Streamable HTTP，在工具设置中添加 `http://127.0.0.1:5030/mcp`
--   **Cherry Studio**: 直接支持 Streamable HTTP，在 MCP 服务器设置中添加 `http://127.0.0.1:5030/mcp`
+- **ChatWise**: 直接支持 Streamable HTTP，在工具设置中添加 `http://127.0.0.1:5030/mcp`
+- **Cherry Studio**: 直接支持 Streamable HTTP，在 MCP 服务器设置中添加 `http://127.0.0.1:5030/mcp`
 
 对于不直接支持 Streamable HTTP 的客户端，可以使用 [mcp-proxy](https://github.com/sparfenyuk/mcp-proxy) 工具转发请求：
 
--   **Claude Desktop**: 通过 mcp-proxy 支持，需要配置 `claude_desktop_config.json`
--   **Monica Code**: 通过 mcp-proxy 支持，需要配置 VSCode 插件设置
+- **Claude Desktop**: 通过 mcp-proxy 支持，需要配置 `claude_desktop_config.json`
+- **Monica Code**: 通过 mcp-proxy 支持，需要配置 VSCode 插件设置
 
 ### 详细集成指南
 
@@ -340,7 +340,7 @@ Chatlog 可以与多种支持 MCP 的 AI 助手集成，包括：
 
 查看 [Prompt 指南](docs/prompt.md) 获取详细示例。
 
-同时欢迎大家分享使用经验和 prompt！如果您有好的 prompt 示例或使用技巧，请通过 [Discussions](https://github.com/sjzar/chatlog/discussions) 进行分享，共同进步。
+同时欢迎大家分享使用经验和 prompt！如果您有好的 prompt 示例或使用技巧，请通过 [Discussions](https://github.com/IJing-WishSnow/IWS-chatlogbackup/discussions) 进行分享，共同进步。
 
 ## 免责声明
 
@@ -350,10 +350,10 @@ Chatlog 可以与多种支持 MCP 的 AI 助手集成，包括：
 
 ### 摘要（请阅读完整免责声明）
 
--   仅限处理您自己合法拥有的聊天数据或已获授权的数据
--   严禁用于未经授权获取、查看或分析他人聊天记录
--   开发者不对使用本工具可能导致的任何损失承担责任
--   使用第三方 LLM 服务时，您应遵守这些服务的使用条款和隐私政策
+- 仅限处理您自己合法拥有的聊天数据或已获授权的数据
+- 严禁用于未经授权获取、查看或分析他人聊天记录
+- 开发者不对使用本工具可能导致的任何损失承担责任
+- 使用第三方 LLM 服务时，您应遵守这些服务的使用条款和隐私政策
 
 **本项目完全免费开源，任何以本项目名义收费的行为均与本项目无关。**
 
@@ -367,8 +367,8 @@ Chatlog 可以与多种支持 MCP 的 AI 助手集成，包括：
 
 ## Thanks
 
--   [@0xlane](https://github.com/0xlane) 的 [wechat-dump-rs](https://github.com/0xlane/wechat-dump-rs) 项目
--   [@xaoyaoo](https://github.com/xaoyaoo) 的 [PyWxDump](https://github.com/xaoyaoo/PyWxDump) 项目
--   [@git-jiadong](https://github.com/git-jiadong) 的 [go-lame](https://github.com/git-jiadong/go-lame) 和 [go-silk](https://github.com/git-jiadong/go-silk) 项目
--   [Anthropic](https://www.anthropic.com/) 的 [MCP](<(https://github.com/modelcontextprotocol)>) 协议
--   各个 Go 开源库的贡献者们
+- [@0xlane](https://github.com/0xlane) 的 [wechat-dump-rs](https://github.com/0xlane/wechat-dump-rs) 项目
+- [@xaoyaoo](https://github.com/xaoyaoo) 的 [PyWxDump](https://github.com/xaoyaoo/PyWxDump) 项目
+- [@git-jiadong](https://github.com/git-jiadong) 的 [go-lame](https://github.com/git-jiadong/go-lame) 和 [go-silk](https://github.com/git-jiadong/go-silk) 项目
+- [Anthropic](https://www.anthropic.com/) 的 [MCP](<(https://github.com/modelcontextprotocol)>) 协议
+- 各个 Go 开源库的贡献者们

@@ -12,7 +12,7 @@ import (
 	"github.com/sjzar/go-lame"
 	"github.com/sjzar/go-silk"
 
-	"github.com/sjzar/chatlog/pkg/util/zstd"
+	"github.com/IJing-WishSnow/IWS-chatlogbackup/pkg/util/zstd"
 )
 
 const (

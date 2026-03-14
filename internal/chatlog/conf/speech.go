@@ -3,7 +3,7 @@ package conf
 import (
 	"strings"
 
-	"github.com/sjzar/chatlog/internal/whisper"
+	"github.com/IJing-WishSnow/IWS-chatlogbackup/internal/whisper"
 )
 
 // OpenAISettings captures provider-specific fields retained for backwards compatibility.

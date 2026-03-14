@@ -9,10 +9,10 @@ import (
 	"time"
 
 	"github.com/rs/zerolog/log"
-	"github.com/sjzar/chatlog/internal/chatlog/conf"
-	"github.com/sjzar/chatlog/internal/wechat"
-	"github.com/sjzar/chatlog/pkg/config"
-	"github.com/sjzar/chatlog/pkg/util"
+	"github.com/IJing-WishSnow/IWS-chatlogbackup/internal/chatlog/conf"
+	"github.com/IJing-WishSnow/IWS-chatlogbackup/internal/wechat"
+	"github.com/IJing-WishSnow/IWS-chatlogbackup/pkg/config"
+	"github.com/IJing-WishSnow/IWS-chatlogbackup/pkg/util"
 )
 
 const (

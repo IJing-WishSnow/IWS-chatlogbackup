@@ -3,7 +3,7 @@ package repository
 import (
 	"context"
 
-	"github.com/sjzar/chatlog/internal/model"
+	"github.com/IJing-WishSnow/IWS-chatlogbackup/internal/model"
 )
 
 func (r *Repository) GetSessions(ctx context.Context, key string, limit, offset int) ([]*model.Session, error) {

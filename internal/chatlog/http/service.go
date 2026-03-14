@@ -10,10 +10,10 @@ import (
 	"github.com/mark3labs/mcp-go/server"
 	"github.com/rs/zerolog/log"
 
-	"github.com/sjzar/chatlog/internal/chatlog/conf"
-	"github.com/sjzar/chatlog/internal/chatlog/database"
-	"github.com/sjzar/chatlog/internal/errors"
-	"github.com/sjzar/chatlog/internal/whisper"
+	"github.com/IJing-WishSnow/IWS-chatlogbackup/internal/chatlog/conf"
+	"github.com/IJing-WishSnow/IWS-chatlogbackup/internal/chatlog/database"
+	"github.com/IJing-WishSnow/IWS-chatlogbackup/internal/errors"
+	"github.com/IJing-WishSnow/IWS-chatlogbackup/internal/whisper"
 )
 
 type Service struct {

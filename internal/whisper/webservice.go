@@ -13,7 +13,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/sjzar/chatlog/pkg/util/silk"
+	"github.com/IJing-WishSnow/IWS-chatlogbackup/pkg/util/silk"
 )
 
 // WebServiceConfig controls the behaviour of the HTTP Whisper webservice backend.

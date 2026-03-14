@@ -12,11 +12,11 @@ import (
 	"github.com/mark3labs/mcp-go/server"
 	"github.com/rs/zerolog/log"
 
-	"github.com/sjzar/chatlog/internal/chatlog/conf"
-	"github.com/sjzar/chatlog/internal/errors"
-	"github.com/sjzar/chatlog/internal/model"
-	"github.com/sjzar/chatlog/pkg/util"
-	"github.com/sjzar/chatlog/pkg/version"
+	"github.com/IJing-WishSnow/IWS-chatlogbackup/internal/chatlog/conf"
+	"github.com/IJing-WishSnow/IWS-chatlogbackup/internal/errors"
+	"github.com/IJing-WishSnow/IWS-chatlogbackup/internal/model"
+	"github.com/IJing-WishSnow/IWS-chatlogbackup/pkg/util"
+	"github.com/IJing-WishSnow/IWS-chatlogbackup/pkg/version"
 )
 
 func (s *Service) initMCPServer() {

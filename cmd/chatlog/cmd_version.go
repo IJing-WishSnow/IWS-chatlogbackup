@@ -3,7 +3,7 @@ package chatlog
 import (
 	"fmt"
 
-	"github.com/sjzar/chatlog/pkg/version"
+	"github.com/IJing-WishSnow/IWS-chatlogbackup/pkg/version"
 
 	"github.com/spf13/cobra"
 )

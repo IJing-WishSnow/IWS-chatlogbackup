@@ -12,16 +12,16 @@ import (
 	"time"
 
 	"github.com/rs/zerolog/log"
-	"github.com/sjzar/chatlog/internal/chatlog/conf"
-	"github.com/sjzar/chatlog/internal/chatlog/ctx"
-	"github.com/sjzar/chatlog/internal/chatlog/database"
-	"github.com/sjzar/chatlog/internal/chatlog/http"
-	"github.com/sjzar/chatlog/internal/chatlog/wechat"
-	"github.com/sjzar/chatlog/internal/tray"
-	iwechat "github.com/sjzar/chatlog/internal/wechat"
-	"github.com/sjzar/chatlog/pkg/config"
-	"github.com/sjzar/chatlog/pkg/util"
-	"github.com/sjzar/chatlog/pkg/util/dat2img"
+	"github.com/IJing-WishSnow/IWS-chatlogbackup/internal/chatlog/conf"
+	"github.com/IJing-WishSnow/IWS-chatlogbackup/internal/chatlog/ctx"
+	"github.com/IJing-WishSnow/IWS-chatlogbackup/internal/chatlog/database"
+	"github.com/IJing-WishSnow/IWS-chatlogbackup/internal/chatlog/http"
+	"github.com/IJing-WishSnow/IWS-chatlogbackup/internal/chatlog/wechat"
+	"github.com/IJing-WishSnow/IWS-chatlogbackup/internal/tray"
+	iwechat "github.com/IJing-WishSnow/IWS-chatlogbackup/internal/wechat"
+	"github.com/IJing-WishSnow/IWS-chatlogbackup/pkg/config"
+	"github.com/IJing-WishSnow/IWS-chatlogbackup/pkg/util"
+	"github.com/IJing-WishSnow/IWS-chatlogbackup/pkg/util/dat2img"
 )
 
 const initialDecryptPollInterval = 5 * time.Second
